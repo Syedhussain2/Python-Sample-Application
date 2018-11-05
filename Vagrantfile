@@ -25,11 +25,13 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = "base"
 
-  config.vm.define "nginx-cookbook" do |nginx|
-    nginx.vm.box = "ubuntu/xenial64"
+  config.vm.define "uberApp" do |uberApp|
+    uberApp.vm.box = "ubuntu/xenial64"
+    uberApp.vm.synced_folder "app", "/home/vagrant/app"
 
-    nginx.vm.provision "chef_solo" do |chef|
+    uberApp.vm.provision "chef_solo" do |chef|
       chef.add_recipe "nginx-cookbook::default"
+      chef.add_recipe "python_cookbook::default"
     end
   end
 
