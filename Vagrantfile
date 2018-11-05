@@ -27,6 +27,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "nginx-cookbook" do |nginx|
     nginx.vm.box = "ubuntu/xenial64"
+
     nginx.vm.provision "chef_solo" do |chef|
       chef.add_recipe "nginx-cookbook::default"
     end
