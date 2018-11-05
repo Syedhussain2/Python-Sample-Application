@@ -32,6 +32,6 @@ Vagrant.configure("2") do |config|
       chef.add_recipe "nginx-cookbook::default"
     end
   end
-  
+
 
 end
