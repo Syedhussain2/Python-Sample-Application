@@ -20,7 +20,7 @@ def set_env vars
   return command
 end
 
-
+# 
 Vagrant.configure("2") do |config|
 
   config.vm.box = "base"
