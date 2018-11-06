@@ -1,10 +1,10 @@
 DEPENDENCIES
   nginx-cookbook
     git: git@github.com:ryanlecoutresparta/nginx-cookbook.git
-    revision: bacece84f20dc5f67197366321a4f98338af863f
+    revision: 1969525da0110efb562bf8b730685a3df5a7fe64
   python_cookbook
     git: git@github.com:DavidSIJames/Sparta_uber_project_Python_cookbook.git
-    revision: d8882f481836428d1124572c696c0df1c95fa145
+    revision: 78de9b9cc9a89973568f1dc41d32319983b84a45
 
 GRAPH
   nginx-cookbook (0.1.0)
