@@ -52,3 +52,24 @@ end
 execute "install Flask-SSLify via pip" do
   command "pip2 install Flask-SSLify==0.1.4"
 end
+execute "install pytest via pip" do
+  command "pip2 install pyTest==2.5.2"
+end
+execute "install pytest-cov via pip" do
+  command "pip2 install pytest-cov==1.6"
+end
+execute "install betamax via pip" do
+  command "pip2 install betamax==0.4.0"
+end
+execute "install flake8 via pip" do
+  command "pip2 install flake8==2.1.0"
+end
+execute "install pep8 via pip" do
+  command "pip2 install pep8==1.5.6"
+end
+execute "install pyflakes via pip" do
+  command "pip2 install pyflakes==0.8.1"
+end
+execute "install coveralls via pip" do
+  command "pip2 install coveralls==0.4.2"
+end

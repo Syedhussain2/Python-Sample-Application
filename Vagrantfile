@@ -27,6 +27,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "uberApp" do |uberApp|
     uberApp.vm.box = "ubuntu/xenial64"
+    uberApp.vm.network "private_network", ip: "192.168.10.100"
+    uberApp.hostsupdater.aliases = ["development.local"]
     uberApp.vm.synced_folder "app", "/home/vagrant/app"
 
     uberApp.vm.provision "chef_solo" do |chef|
