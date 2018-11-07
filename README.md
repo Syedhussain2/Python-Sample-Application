@@ -43,8 +43,8 @@ Created a Python cookbook which provisions all dependencies for the [Uber Sample
 5. Wrote the Unit Tests for the cookbook.
 6. Wrote the Integration Tests for the cookbook.
 7. Wrote the Recipe for the cookbook.
-8. Ran chef exec rspec spec to check if everything was running.
-9. Ran kitchen test to check if everything was working as it should an was where it should be.
+8. Ran chef exec spec rspec to check if everything was running.
+9. Ran Kitchen Test to check if everything was working as it should an was where it should be.
 
 # Step 3 - Cookbook Platform
 ### **Description**
@@ -53,7 +53,7 @@ Creation of the platform for both the Nginx and Python cookbooks to be imported 
 ### **Fork The Application**
 1. Fork the [GIT Repository](https://github.com/uber/Python-Sample-Application) onto your GitHub account.
 2. Open up the file on atom.
-###  **Inside The File**
+###  **Inside The Repo**
 1. In the command line create a berksfile and packer.json, type
 ```
 touch Berksfile packer.json
