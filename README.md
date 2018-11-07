@@ -14,6 +14,8 @@ The following ReadMe displays information on a step by step guide on how a platf
 # How To Download Repository
 1. Search for Syedhussain2 in GitHub. [Click Here](https://github.com/Syedhussain2/Uber_App_Engineering17) for the link.
 2. Fork/Clone the files displayed.
+3. [Python Cookbook](https://github.com/DavidSIJames/Sparta_uber_project_Python_cookbook) Repository.
+4. [NGINX Cookbook](https://github.com/ryanlecoutresparta/nginx-cookbook) Repository.
 
 # Step 1 - NGINX Cookbook
 ### **Description**
