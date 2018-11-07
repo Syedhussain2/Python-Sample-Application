@@ -9,7 +9,6 @@ The following ReadMe displays information on a step by step guide on how a platf
 * Jenkins
 * AWS
 * Atom
-* Trello
 
 # How To Download Repository
 1. Search for Syedhussain2 in GitHub. [Click Here](https://github.com/Syedhussain2/Uber_App_Engineering17) for the link.
@@ -303,9 +302,11 @@ packer build packer.json
 # Challenges
 ## **NGINX**
 
-1. Trying to include all the necessary tests for Nginx.
-2. Trying to make the proxy port work without any errors; we were getting bad gateway error 502 for a while.
-3. The main error/mistake we made was using 'http://development.local' in the proxy.conf file instead of 'http://localhost'. This made it impossible to vagrant up because Nginx did not recognise development.local yet, as it had not completed the mapping of development.local to 192.168.10.100 (which is done in the Vagrantfile).
+1. Our first challenge was having to include all the necessary unit and integration tests for Nginx and the proxy port functionality, to ensure that things were working as expected.
+
+2. Another challenge was actually being able to see evidence of the proxy port working correctly in the browser. To do this, we had to temporarily bring Node.js into the cookbook, which also meant that further tests were required.
+
+3. Finally, it was a challenge trying to make the proxy port work without any errors. The main error/mistake we made was using 'http://development.local' in the proxy.conf file instead of 'http://localhost'. This made it impossible to vagrant up because Nginx did not recognise development.local yet, as it had not completed the mapping of development.local to 192.168.10.100 (which is done in the Vagrantfile).
 
 ## **PYTHON**
 1. Our biggest challenge was getting the remote directory working. It would create a directory in the machine but when we tried to access the directory, it would say that the directory does not exist.
