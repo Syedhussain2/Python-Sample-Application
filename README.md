@@ -239,12 +239,65 @@ Insert the following code.
 ```
 
 # JENKINS
+## Description:
 
+Two Jenkins jobs were created to complete this task. One job initiated the creation of a AMI from which an instance was spun up using a *slave node* on AWS. From this, the test was created on the application using the instance to ensure it was fully functional. IF the instance was successfully created AND the test passed, another job would be triggered resulting in a new AMI spinning up consisting of the fully working code.
+## Job 1 - UBER Testing:
 
+1. Select new item
+2. Input item name and Select Free-style project then press OK.
 
+### General
+1. Provide Desciption.
+2. Select GitHub project and enter your GitHub URL.
+3. Select "Restrict where this project can be run" and enter the name of the slave node to be used i.e. "Engineering17-uber".
 
+### Source Code Management
+1. Select Git and enter the Repository URL and credentials to your Github. Enter to your required branch.
 
+### Build Triggers
+1. Select "GitHub hook trigger for GITScm polling"
 
+### Build Environment
+1. Select "Use secret text(s) or file(s)" and specify you're access and secret keys (Ireland credentials were used in this instance).
+
+### Build
+1. Select add build step and search for Execute shell , inside Excecute type the following commands :
+
+```
+cd app
+make test
+```
+
+### Post-build Actions
+1. Select add post build action and select git publisher and select push only if build succeeds and merge results.
+
+## Job 2 - UBER AMI Creation:
+1. Select new item
+2. Input item name and Select Free-style project then press OK.
+
+### General
+1. Provide Desciption.
+2. Select GitHub project and enter your GitHub URL.
+
+### Source Code Management
+1. Select Git and enter the Repository URL and credentials to your Github.
+
+### Build Triggers
+1. Select "Build after other projects are built" and specify the task to trigger off. Select the "Trigger only if build is stable" sub-option.
+2. Select "GitHub hook trigger for GITScm polling"
+
+### Build Environment
+1. Select "Use secret text(s) or file(s)" and specify you're access and secret keys (Ireland credentials were used in this instance).
+
+### Build
+1. Select add build step and search for Execute shell , inside Excecute type the following commands :
+
+```
+packer validate packer.json
+packer build packer.json
+
+```
 
 
 # Challenges
