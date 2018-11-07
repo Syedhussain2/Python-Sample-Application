@@ -43,8 +43,8 @@ Created a Python cookbook which provisions all dependencies for the [Uber Sample
 5. Wrote the Unit Tests for the cookbook.
 6. Wrote the Integration Tests for the cookbook.
 7. Wrote the Recipe for the cookbook.
-8. Ran chef exec spec rspec to check if everything was running.
-9. Ran Kitchen Test to check if everything was working as it should an was where it should be.
+8. Ran chef exec rspec spec to check if everything was running.
+9. Ran kitchen test to check if everything was working as it should an was where it should be.
 
 # Step 3 - Cookbook Platform
 ### **Description**
