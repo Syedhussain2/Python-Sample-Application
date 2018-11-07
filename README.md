@@ -9,7 +9,6 @@ The following ReadMe displays information on a step by step guide on how a platf
 * Jenkins
 * AWS
 * Atom
-* Trello
 
 # How To Download Repository
 1. Search for Syedhussain2 in GitHub. [Click Here](https://github.com/Syedhussain2/Uber_App_Engineering17) for the link.
